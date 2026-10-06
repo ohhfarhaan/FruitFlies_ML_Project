@@ -58,8 +58,9 @@ def find_contours(img, mask=None, fly_color='black', type='core'):
     else:
         raise Exception('Invalid type.')
 
-    # extract contours
-    _, contours, _ = cv2.findContours(bw, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        # extract contours
+    contours, _ = cv2.findContours(
+        bw, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     # return contours
     return contours
