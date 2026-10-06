@@ -60,7 +60,7 @@ def plot_pca(X, y):
 def train(X, y, plot=False):
     X_train, X_test, y_train, y_test = train_test_split(X, y)
 
-    clf = make_pipeline(PCA(n_components=40), LinearRegression())
+    clf = make_pipeline(PCA(n_components=60), LinearRegression())
     clf.fit(X_train, y_train)
 
     if plot:
